@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Programacion2-2024',
+  res.render('index', { title: 'Curriculum Vitae',
   fullName: "Miguel David",
   full_surname: "Ponce Urbaez",
   section: 2,
