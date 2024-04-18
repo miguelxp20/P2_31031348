@@ -6,6 +6,7 @@
 
 body{
   background-color: #cccccc;
+  height: cover;
 }
 
 .header{
@@ -16,18 +17,18 @@ body{
 
 .header p{
   font-size: 1rem;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1{
   font-size: 2rem;
   padding: 30px 0 10px 0;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main{
   background-color: #fafafa;
-  height: 100vh;
+  height: cover;
 }
 
 .section{
@@ -75,3 +76,73 @@ main{
   box-shadow: 1px 1px 10px #555;
 }
 
+button .contactame{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+button .opcion{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.experiencia h2{
+  text-align: center;
+  padding: 20px 0;
+  color: #757575;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container-experiencia{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+  gap: 10px;
+}
+
+.elementos{
+  border: solid thin red;
+  box-shadow: 1px 1px 10px #555;
+  
+}
+
+.elementos h3{
+  font-weight: 100;
+  color: #ffffff;
+  padding: 20px;
+  background-color: #424242;
+}
+
+.informacion-extra{
+  padding: 20px;
+}
+
+.titulo,
+.fecha{
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.separador-uno{
+  padding: 0 50px;
+  border-right: solid 2px #4585ed;
+}
+
+.separador-uno .elementos{
+  margin-bottom: 70px;
+}
+
+.separador-dos{
+  padding: 0 50px;
+}
+
+.separador-dos .elementos:first-child{
+  transform: translateY(50px);
+}
+
+.separador-dos .elementos:nth-child(2){
+  transform: translateY(50px);
+}
+
+.separador-dos .elementos{
+  margin-bottom: 70px;
+}
