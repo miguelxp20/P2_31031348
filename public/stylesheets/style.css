@@ -1,7 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body{
@@ -10,7 +16,7 @@ body{
 }
 
 .header{
-  background-color: #18386b;
+  background-color: #1e375c;
   text-align: center;
   color: #ffffff;
 }
@@ -32,11 +38,12 @@ main{
 }
 
 .section{
-  margin: 20px auto;
-  padding: 20px 100px;
+  margin: 10px auto;
+  padding: 20px 50px;
   width: 90%;
-  box-shadow: 1px 1px 10px #555;
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
   text-align: center;
+
 }
 
 .icons {
@@ -66,43 +73,53 @@ main{
   margin-bottom: 30px;
 }
 
-.btns button{
-  padding: 10px 20px;
+.btns a{
+  padding: 10px 15px;
   background-color: #4585ed;
-  color: #ffffff;
   border: none;
-  margin: 0 10px;
+  margin: 10px 10px;
   cursor: pointer;
   box-shadow: 1px 1px 10px #555;
-}
-
-button .contactame{
+  grid-template-columns: (1,1fr);
+  gap: 1rem;
   color: #ffffff;
   text-decoration: none;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-button .opcion{
-  color: #ffffff;
-  text-decoration: none;
+@media (min-width: 768px) {
+  .btns a{
+    grid-template-rows: (2, 1fr);
+    gap: 10px;
+  }
 }
 
 .experiencia h2{
   text-align: center;
   padding: 20px 0;
-  color: #757575;
+  color: #4b4b4b;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .container-experiencia{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 50px;
-  gap: 10px;
+  padding: 40px;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container-experiencia{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .elementos{
-  border: solid thin red;
   box-shadow: 1px 1px 10px #555;
-  
+}
+
+@media (min-width: 768px) {
+    .container-experiencia{
+      grid-template-rows: (4, 1fr);
+    }
 }
 
 .elementos h3{
@@ -123,7 +140,7 @@ button .opcion{
 }
 
 .separador-uno{
-  padding: 0 50px;
+  padding: 0 30px;
   border-right: solid 2px #4585ed;
 }
 
@@ -132,7 +149,7 @@ button .opcion{
 }
 
 .separador-dos{
-  padding: 0 50px;
+  padding: 0 30px;
 }
 
 .separador-dos .elementos:first-child{
@@ -145,4 +162,20 @@ button .opcion{
 
 .separador-dos .elementos{
   margin-bottom: 70px;
+}
+
+.bloques{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 468px) {
+  .bloques{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bloque{
+  text-align: center;
 }
