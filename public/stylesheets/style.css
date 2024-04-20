@@ -71,6 +71,7 @@ main{
 .section article {
   text-align: center;
   margin-bottom: 30px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .btns button{
@@ -105,13 +106,17 @@ button .opcion{
 .experiencia h2{
   text-align: center;
   padding: 20px 0;
-  color: #4b4b4b;
+  color: #ffffff;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #4585ed;
 }
+
+
 .container-experiencia{
   display: grid;
   padding: 40px;
   gap: 1rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -176,6 +181,9 @@ button .opcion{
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (min-width: 468px) {
@@ -185,5 +193,15 @@ button .opcion{
 }
 
 .bloque{
+  text-align: center;
+}
+
+.bloque_titulo{
+  font-size: 1.7rem;
+}
+
+footer{
+  background-color: black;
+  color: #ffffff;
   text-align: center;
 }
