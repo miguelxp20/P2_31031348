@@ -73,7 +73,7 @@ main{
   margin-bottom: 30px;
 }
 
-.btns a{
+.btns button{
   padding: 10px 15px;
   background-color: #4585ed;
   border: none;
@@ -82,16 +82,24 @@ main{
   box-shadow: 1px 1px 10px #555;
   grid-template-columns: (1,1fr);
   gap: 1rem;
-  color: #ffffff;
-  text-decoration: none;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
 }
 
 @media (min-width: 768px) {
-  .btns a{
+  .btns button{
     grid-template-rows: (2, 1fr);
     gap: 10px;
   }
+}
+
+button .contactame{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+button .opcion{
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .experiencia h2{
