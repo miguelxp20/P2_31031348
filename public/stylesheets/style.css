@@ -8,6 +8,7 @@ html {
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body{
@@ -204,4 +205,104 @@ footer{
   background-color: black;
   color: #ffffff;
   text-align: center;
+}
+
+
+.form{
+  background-color: #fafafa;
+  margin: auto;
+  width: 90%;
+  max-width: 400px;
+  padding: 3em 3em;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.form-title{
+  font-size: 2rem;
+  margin-bottom: .5em;
+}
+
+.paragraph{
+  font-weight: 300px;
+}
+
+.ghost-link{
+  font-weight: 400;
+  color: #4585ed;
+  text-decoration: none;
+}
+
+.form-container{
+  margin-top: 1rem;
+  display: grid;
+  gap: 1.5em;
+}
+
+.form-group{
+  position: relative;
+  color: #5757577e;
+}
+
+.form-input{
+  width: 100%;
+  background:none;
+  color: #706c6c;
+  font-size: 1rem;
+  padding: .6em .3rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #5757577e;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label{
+  transform: translateY(-12px) scale(.7);
+  transform-origin: left top;
+  color: #1e375c;
+}
+
+.form-label{
+  color: #5757577e;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  transform: translateY(10px);
+  transition: transform .4s ;
+}
+
+.form-submit{
+  background: #1e375c;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: .8em 0;
+  border-radius: .5em;
+  border: none;
+  cursor: pointer;
+}
+
+.form-line{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #1e375c;
+  transform: scale(0);
+  transform: left bottom;
+  transition: transform .4s;
+}
+
+.form-input:focus ~ .form-line,
+.form-input:not(:placeholder-shown) ~ .form-line{
+  transform: scale(1);
+}
+
+@media (min-width: 425px) {
+    .form-title{
+      font-size: 1.8rem;
+    }
 }
