@@ -1,14 +1,16 @@
+const ContactosController = require("../controller/ContactosController");
+const contactosController = new ContactosController();
+
+const indexController = require("../controller/indexController");
+
 var express = require('express');
 var router = express.Router();
 
+
+
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Curriculum Vitae - Miguel Ponce',
-  fullName: "Miguel David Ponce Urbaez",
-  position: "Ingeniero en Informatica, experto en Seguridad Informatica.",
-  section: 2,
-  id: 31031348
- });
-});
+router.get("/", indexController);
+
+router.post("/form-contact", contactosController.add);
 
 module.exports = router;

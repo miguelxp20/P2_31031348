@@ -7,8 +7,8 @@
   </head>
   <body>
      <header class="header">
-      <h1 class="fullName"><%= fullName %></h1>
-      <p><%= position %></p>
+      <h1 class="fullName">Miguel Ponce</h1>
+      <p>Ingeniero en Informatica y experto en ciberseguridad.</p>
       
      </header>
      <main>
@@ -121,31 +121,32 @@
                     </div> <!--.bloque-->
           </div>
         </section>
-        <form id="form" class="form">
+        <form action="/form-contact" method="post" id="form" class="form">
           <h2 class="form-title">Inicia Sesion</h2>
           <p class="paragraph">¿Aun no tienes sesion iniciada? <a class="ghost-link" href="#">Entra aquí.</a></p>
           
           <div class="form-container">
             
             <div class="form-group">
-              <input type="text" id="name" class="form-input" placeholder="">
+              <input name="name" type="text" id="name" class="form-input" placeholder="" required>
               <label for="name" class="form-label">Nombre:</label>
               <span class="form-line"></span>
             </div>
 
             <div class="form-group">
-              <input type="email" id="email" class="form-input" placeholder="">
+              <input name="email" type="email" id="email" class="form-input" placeholder="" required>
               <label for="email" class="form-label">Email:</label>
               <span class="form-line"></span>
             </div>
 
             <div class="form-group">
-              <input type="text" id="comment" class="form-input" placeholder="">
+              <input name="comment" type="text" id="comment" class="form-input" placeholder="" required>
               <label for="comment" class="form-label">Comentario:</label>
               <span class="form-line"></span>
             </div>
 
             <input type="submit" id="form-submit" class="form-submit" value="Enviar">
+
           </div>
         </form>
         <footer>
