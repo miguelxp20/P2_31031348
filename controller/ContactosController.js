@@ -26,10 +26,8 @@ class ContactosController {
     
         console.log(contactos);
 
-        res.redirect("/");
+        res.send("Formulario enviado con exito");
     }
 }
-
-
 
 module.exports = ContactosController;

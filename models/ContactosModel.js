@@ -50,5 +50,4 @@ class ContactosModel {
       }
 }
 
-
 module.exports = ContactosModel;
