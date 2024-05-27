@@ -39,12 +39,12 @@ class ContactosController {
 
 
         //Guardar los datos del formulario
-        const ip = await this.obtenerIp();
+        const ip = req.ip;
         const fecha = new Date().toISOString();
-        const pais = await this.obtenerPais(ip);
+        
 
 
-        await this.contactosModel.crearContacto(name, email, comment, ip, fecha, pais);
+        await this.contactosModel.crearContacto(name, email, comment, ip, fecha);
 
         const contactos = await this.contactosModel.obtenerAllContactos();
     
