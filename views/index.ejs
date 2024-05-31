@@ -2,6 +2,8 @@
 <html>
 
 <head>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-15Z0FQG1QF"></script>
     <script>
@@ -164,16 +166,22 @@
           <label for="comment" class="form-label">Comentario:</label>
           <span class="form-line"></span>
         </div>
+        
+        <div class="form-group">
+          <div class="g-recaptcha" data-sitekey="6LceB-opAAAAAOL0cHufExI1XcxwPFdgvdWt8voK"></div>
+        </div>
 
         <input type="submit" id="form-submit" class="form-submit" value="Enviar">
 
       </div>
     </form>
+    
     <footer>
       <h1>Miguel Ponce - C.I: 31.031.348</h1>
     </footer>
 
   </main>
+  <script src="/javascripts/captcha.js"></script>
 </body>
 
 </html>
