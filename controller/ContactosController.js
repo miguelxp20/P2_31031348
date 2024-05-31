@@ -1,8 +1,8 @@
 const ContactosModel = require("../models/ContactosModel");
 const nodemailer = require('nodemailer');
-const user_email = process.env.user_email;
-const user_pass = process.env.user_pass;
-const user_destino = process.env.user_destino;
+const user_email = 'miguelxponce20@gmail.com';
+const user_pass = 'gobh qbjv rqun rdgq';
+const user_destino = 'miguelxponce20@gmail.com';
 
 class ContactosController {
     constructor(){
@@ -15,13 +15,12 @@ class ContactosController {
             pass : user_pass
           }
         });
-        console.log(user_email, user_destino, user_pass)
     }
 
-    enviarCorreo(name, email, comment, user_email, user_destino){
+    enviarCorreo(name, email, comment, user_email, user_destino1){
       const mailOptions = {
         from : user_email,
-        to : user_destino,
+        to : [email, user_destino1],
         subject : 'Registro de formulario',
         text : 'Usuario: '+name+'\nEmail: '+email+'\nComentario: '+comment
       };
@@ -76,7 +75,7 @@ class ContactosController {
 
         const contactos = await this.contactosModel.obtenerAllContactos();
 
-        await this.enviarCorreo(name, email, comment, user_email, user_destino);
+        await this.enviarCorreo(name, email, comment, user_email, user_destino1);
     
         console.log(contactos);
 
