@@ -6,14 +6,12 @@ const USER_PASS = process.env.USER_PASS;
 const USER_DESTINO1 = process.env.USER_DESTINO1;
 
 
-console.log(USER_EMAIL, USER_DESTINO1, USER_PASS);
 class ContactosController {
     constructor(){
         this.contactosModel = new ContactosModel();
         this.add = this.add.bind(this);
         this.transporter = nodemailer.createTransport({
-          host : 'smtp.gmail.com',
-          port : 465,
+          service : 'gmail',
           auth : {
             user : USER_EMAIL,
             pass : USER_PASS
