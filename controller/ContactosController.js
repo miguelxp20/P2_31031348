@@ -1,26 +1,31 @@
+require('dotenv').config();
 const ContactosModel = require("../models/ContactosModel");
 const nodemailer = require('nodemailer');
-const user_email = 'miguelxponce20@gmail.com';
-const user_pass = 'gobh qbjv rqun rdgq';
-const user_destino = 'miguelxponce20@gmail.com';
+const USER_EMAIL = process.env.USER_EMAIL;
+const USER_PASS = process.env.USER_PASS;
+const USER_DESTINO1 = process.env.USER_DESTINO1;
 
+
+console.log(USER_EMAIL, USER_DESTINO1, USER_PASS);
 class ContactosController {
     constructor(){
         this.contactosModel = new ContactosModel();
         this.add = this.add.bind(this);
         this.transporter = nodemailer.createTransport({
-          service : 'gmail',
+          host : 'smtp.gmail.com',
+          port : 465,
           auth : {
-            user : user_email,
-            pass : user_pass
+            user : USER_EMAIL,
+            pass : USER_PASS
           }
         });
     }
 
-    enviarCorreo(name, email, comment, user_email, user_destino1){
+   
+    enviarCorreo(name, email, comment, USER_EMAIL, USER_DESTINO1){
       const mailOptions = {
-        from : user_email,
-        to : [email, user_destino1],
+        from : USER_EMAIL,
+        to : [email, USER_DESTINO1],
         subject : 'Registro de formulario',
         text : 'Usuario: '+name+'\nEmail: '+email+'\nComentario: '+comment
       };
@@ -34,6 +39,7 @@ class ContactosController {
         }
       });
     }
+    
 
     async obtenerIp() {
       try {
@@ -75,7 +81,7 @@ class ContactosController {
 
         const contactos = await this.contactosModel.obtenerAllContactos();
 
-        await this.enviarCorreo(name, email, comment, user_email, user_destino1);
+        await this.enviarCorreo(name, email, comment, USER_EMAIL, USER_DESTINO1);
     
         console.log(contactos);
 

@@ -1,7 +1,7 @@
 function captcha(event){
     let response = grecaptcha.getResponse();
     if (response.length === 0){
-        console.log("error")
+        alert("Error, verifique el captcha antes de enviar.")
         event.preventDefault();
     }
 }
