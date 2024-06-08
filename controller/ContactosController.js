@@ -82,7 +82,7 @@ class ContactosController {
     
         console.log(contactos);
 
-        res.send("hjdji");
+        res.send("Formulario enviado con exito");
     }
 }
 
