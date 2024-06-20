@@ -2,20 +2,33 @@
 <html>
 
 <head>
+  <!-- Google Recaptcha -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-15Z0FQG1QF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-  
-      gtag('config', 'G-15Z0FQG1QF');
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
+  <!-- Google Sign In -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <!-- My ID -->
+  <meta name="google-signin-client_id"
+    content="903910274364-4o9redjjok9m6e33kgr99uh89nop862a.apps.googleusercontent.com">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-15Z0FQG1QF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-15Z0FQG1QF');
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:title" content="Express Formulario Miguel Ponce">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://proyectopro2.onrender.com">
+    <meta property="og:image" content="https://https://proyectopro2.onrender.com/images/ogp.jpg">
+    <meta property="og:description" content="Curriculum del estudiante Sebastian Ramirez">
+
   <title>
     <%= title %>
   </title>
@@ -145,7 +158,7 @@
     </section>
     <form action="/form-contact" method="post" id="form" class="form">
       <h2 class="form-title">Inicia Sesion</h2>
-      <p class="paragraph">¿Aun no tienes sesion iniciada? <a class="ghost-link" href="#">Entra aquí.</a></p>
+      <p class="paragraph">¿Aun no tienes sesion iniciada? <a class="ghost-link" href="/auth/login">Entra aquí.</a></p>
 
       <div class="form-container">
 
@@ -166,22 +179,29 @@
           <label for="comment" class="form-label">Comentario:</label>
           <span class="form-line"></span>
         </div>
-        
+
+        <!--Recaptcha Button-->
         <div class="form-group">
           <div class="g-recaptcha" data-sitekey="6LceB-opAAAAAOL0cHufExI1XcxwPFdgvdWt8voK"></div>
         </div>
 
         <input type="submit" id="form-submit" class="form-submit" value="Enviar">
-
+        
+        <a class="a-login" href="/auth/login">Ingresar a Contactos</a>
       </div>
     </form>
+
+    <!-- <a href="/contactos">Presione aqui contactos</a> -->
     
+
+
     <footer>
       <h1>Miguel Ponce - C.I: 31.031.348</h1>
     </footer>
 
   </main>
   <script src="/javascripts/captcha.js"></script>
+  <script src="../app.js"></script>
 </body>
 
 </html>

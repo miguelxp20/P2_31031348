@@ -306,3 +306,57 @@ footer{
       font-size: 1.8rem;
     }
 }
+
+
+.contactos{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.title-contactos{
+  text-align: center;
+  justify-content: center;
+}
+
+table {
+  height: cover;
+  border-collapse: collapse;
+  margin: auto;
+  width: 90%;
+  max-width: 400px;
+  font-size: 18px;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table thead tr {
+  background-color: #1e375c;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+table th, table td {
+  padding: 12px 15px;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #000000;
+}
+
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #1e375c;
+}
+
+.a-login{
+  background: #0c4edd;
+  color: #fff;
+  text-decoration: none;
+  font-size: .9rem;
+  padding: .4em ;
+  border-radius: .5em;
+  cursor: pointer;
+}
+

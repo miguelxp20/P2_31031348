@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Usuarios Registrados</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="contactos">
+    <h1 class="title-contactos">Tabla de Usuarios Registrados</h1>
+    <table border="1">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Mensaje</th>
+            <th>IP</th>
+            <th>Fecha</th>
+            <th>País</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.forEach(function(row) { %>
+            <tr>
+              <td><%= row.name %></td>
+              <td><%= row.email %></td>
+              <td><%= row.comment %></td>
+              <td><%= row.ip %></td>
+              <td><%= row.fecha %></td>
+              <td><%= row.pais %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+</body>
+</html>

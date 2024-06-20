@@ -36,7 +36,6 @@ class ContactosController {
         }
       });
     }
-    
 
     async obtenerIp() {
       try {

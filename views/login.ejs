@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='/stylesheets/login.css' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Login</title>
+</head>
+<body>
+  
+  <form action="/auth/login" method="post" class="form">
+    <h2 class="form-title">Login</h2>
+  <% if (error_msg) { %>
+    <p style="color: red;"><%= error_msg %></p>
+  <% } %>
+  <div class="form-container">
+    <div class="form-group">
+      <label for="username">Nombre de Usuario:</label>
+      <input type="text" id="username" name="username" class="form-input" placeholder="">
+      <span class="form-line"></span>
+    </div>
+    <div class="form-group">
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" class="form-input" placeholder="">
+      <span class="form-line"></span>
+    </div>
+    <div>
+      <button class="form-submit" type="submit">Ingresar</button> <br>
+      <a class="a-login" href="/auth/google">Login with Google</a>
+    </div>
+  </div>
+  </form>
+  
+</body>
+</html>
