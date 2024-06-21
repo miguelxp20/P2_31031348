@@ -31,11 +31,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Configuración de la sesión
-app.use(session({
-  secret: process.env.SECRET_KEY,
-  resave: false,
-  saveUninitialized: true
-}));
+//  app.use(session({
+//   secret: process.env.SECRET_KEY,
+//   resave: false,
+//   saveUninitialized: true
+// }));
 
 // Configuración de flash
 app.use(flash());
